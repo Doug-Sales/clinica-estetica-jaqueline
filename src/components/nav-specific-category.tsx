@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface Service {
   name: string
@@ -40,7 +41,6 @@ export function NavLinkListTreatment() {
       { name: 'Cicatrizes e Marcas', anchor: 'tratamento' },
       { name: 'Flacidez Facial', anchor: 'tratamento' },
       { name: 'Olheiras', anchor: 'tratamento' },
-      { name: 'Outros Tratamentos', anchor: 'estetica-facial' },
     ],
     Procedimentos: [
       { name: 'Gordura Localizada', anchor: 'tratamento' },
@@ -57,7 +57,6 @@ export function NavLinkListTreatment() {
       { name: 'Remoção de Tatuagem', anchor: 'tratamento' },
       { name: 'Gordura Localizada', anchor: 'tratamento' },
       { name: 'Remoção de Tatuagem', anchor: 'tratamento' },
-      { name: 'Outros Tratamentos', anchor: 'estetica-corporal' },
     ],
   }
 
@@ -84,7 +83,10 @@ const ServiceList: React.FC<{ category: string; services: Service[] }> = ({
       <ul className="mb-2 space-y-3 pl-5 text-sm">
         {services.map((service, index) => (
           <li key={index} className="">
-            &#8212; <a href={`/${service.anchor}`}> {service.name}</a>
+            &#8212;{' '}
+            <Link reloadDocument to={`/${service.anchor}`}>
+              {service.name}
+            </Link>
           </li>
         ))}
       </ul>
