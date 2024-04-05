@@ -35,14 +35,14 @@ const components: { title: string; description: string }[] = [
 export function AboutJaquelineRocha() {
   const gridImg = gridAboutJaquelinePhotos
   return (
-    <main className="container flex flex-col bg-background/90 p-0 py-10 antialiased  lg:py-20 ">
-      <section className="container max-w-screen-xl whitespace-pre-line py-0 pl-0 antialiased ">
-        <div className="container flex bg-muted-foreground/5 ">
-          <div className="flex-row-reverse  py-6 md:min-w-[300px] lg:min-w-[400px]">
+    <main className="container  flex flex-col bg-background/90 p-0 py-10 antialiased  lg:py-20 ">
+      <section className="container max-w-screen-xl whitespace-pre-line p-0 antialiased ">
+        <div className="container flex bg-muted-foreground/5 p-4 md:p-6 lg:p-8 ">
+          <div className="w-full flex-row-reverse py-6 md:min-w-[300px] lg:min-w-[400px]">
             <img
               src={jaquelineRocha}
               alt="Jaqueline Rocha Photo"
-              className=" float-right mb-8 ml-8 aspect-auto w-[400px] bg-muted p-3 shadow-md shadow-foreground lg:ml-14 lg:shadow-lg"
+              className="mb-8 h-auto w-full max-w-[400px] bg-muted p-3 shadow-md shadow-foreground md:ml-4 lg:float-right lg:ml-14 lg:shadow-lg"
             />
             <div className="w-full ">
               <h2 className="px-4 py-8 text-4xl text-muted-foreground ">
@@ -91,20 +91,20 @@ export function AboutJaquelineRocha() {
               </div>
             </div>
 
-            <div className="container mx-auto mt-6 grid px-0 py-10 lg:grid-cols-2 lg:py-20 ">
-              <div className=" container grid h-fit max-w-[450px] grid-cols-2 gap-1 p-0">
+            <div className=" mx-auto mt-6  grid w-full px-0 py-10 *:md:mx-auto lg:grid-cols-2 lg:py-20 ">
+              <div className="  grid h-fit w-[300px]  grid-cols-2 gap-1 p-0 md:w-[380px] lg:w-[450px]">
                 {gridImg.map((imageUrl, index) => (
                   <div key={index} className="bg-foreground/65 p-2 ">
                     <img
                       src={imageUrl}
-                      alt="Description service image"
-                      className="w-full border border-foreground"
+                      alt="Jaqueline Rocha foto"
+                      className="h-auto w-full border border-foreground"
                     />
                   </div>
                 ))}
               </div>
 
-              <div className="flex max-w-[580px] flex-col justify-center whitespace-pre-line">
+              <div className="flex max-w-[580px] flex-col flex-wrap justify-center whitespace-pre-line p-0">
                 <h4 className=" px-8 py-10 text-left text-3xl text-muted-foreground">{`Certificação & Especialização `}</h4>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -132,7 +132,7 @@ const ListItem = React.forwardRef<
         <div
           ref={ref}
           className={
-            'block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+            'block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors focus:bg-accent focus:text-accent-foreground lg:hover:bg-muted lg:hover:text-accent-foreground'
           }
           {...props}
         >

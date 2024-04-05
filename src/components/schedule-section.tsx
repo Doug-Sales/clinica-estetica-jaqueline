@@ -39,7 +39,7 @@ export function ScheduleSection({ intro, title }: TextPageProps) {
           variant={'default'}
         >
           <a
-            href={`https://api.whatsapp.com/send?phone=554${contatoJaqueline}&text=Gostaria%20de%20agendar%20uma%20consulta%20para%20procedimentos%20estéticos.%20Por%20favor,%20indique%20disponibilidade%20e%20instruções%20para%20agendamento.%20Agradeço%20antecipadamente.`}
+            href={`https://api.whatsapp.com/send?phone=${contatoJaqueline}&text=Gostaria%20de%20agendar%20uma%20consulta%20para%20procedimentos%20estéticos.%20Por%20favor,%20indique%20disponibilidade%20e%20instruções%20para%20agendamento.%20Agradeço%20antecipadamente.`}
             target="_blank"
             rel="noreferrer"
           >

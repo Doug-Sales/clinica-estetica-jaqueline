@@ -1,6 +1,6 @@
 import { Button } from './ui/button'
 
-export const contatoJaqueline = '19997321279'
+export const contatoJaqueline = '+5519997321279'
 
 export function ContactSession() {
   return (
@@ -13,15 +13,12 @@ export function ContactSession() {
         <div className="grid grid-cols-1 justify-evenly pb-10 md:flex ">
           <div className="w-96">
             <hr className="mb-7 mt-5 h-0 w-0" />
-            <Button
-              type="button"
-              className="mb-1 block h-11 w-80 text-center text-lg font-semibold"
-              asChild
-            >
+            <Button type="button" asChild>
               <a
                 href={`https://api.whatsapp.com/send?phone=554${contatoJaqueline}&text=Gostaria%20de%20agendar%20uma%20consulta%20para%20procedimentos%20estéticos.%20Por%20favor,%20indique%20disponibilidade%20e%20instruções%20para%20agendamento.%20Agradeço%20antecipadamente.`}
                 target="_blank"
                 rel="noreferrer"
+                className="mb-1 block h-11 min-w-[250px] text-center text-lg font-semibold lg:w-80 "
               >
                 Agendar Consulta
               </a>
@@ -62,11 +59,12 @@ export function ContactSession() {
               <br />
               Jardim Paiquere
             </address>
-            <Button className="w-full " title="Google Maps">
+            <Button title="Google Maps" asChild>
               <a
                 href="https://maps.app.goo.gl/PbWb8zKPfFPSU9Fn9"
                 target="_blank"
                 rel="noreferrer"
+                className=" min-w-[220px] lg:w-full "
               >
                 VER MAPA
               </a>

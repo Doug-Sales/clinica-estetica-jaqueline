@@ -15,21 +15,17 @@ export function FooterClinic() {
                 href={`https://api.whatsapp.com/send?phone=554${contatoJaqueline}&text=Gostaria%20de%20conversar%20sobre%20os%20seus%20teratamentos%20e%20procedimentos%20estéticos.%20Agradeço%20antecipadamente.`}
                 rel="noopener noreferrer"
                 target="_blank"
-                className=" block h-11  w-80 text-lg font-semibold"
+                className=" block h-11 min-w-[250px] text-lg font-semibold lg:w-80"
               >
                 FALAR VIA WHATSAPP
               </a>
             </Button>
-            <Button
-              asChild
-              variant={'link'}
-              className=" block h-11 w-80  text-lg font-semibold "
-            >
+            <Button variant={'link'} asChild>
               <a
                 href="https://www.instagram.com/jaquerocha.c/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center"
+                className="block h-11 min-w-[250px] items-center text-lg font-semibold lg:w-80"
               >
                 <div>
                   <img
