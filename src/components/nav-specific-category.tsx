@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 interface Service {
   name: string
@@ -17,46 +16,46 @@ interface Props {
 export function NavLinkListTreatment() {
   const servicesByCategory = {
     Tratamentos: [
-      { name: 'Preenchimento Facial', anchor: 'tratamento' },
-      { name: 'Harmonização Facial', anchor: 'tratamento' },
-      { name: 'Rugas e Linhas de Expressão', anchor: 'tratamento' },
-      { name: 'Cicatrizes e Marcas', anchor: 'tratamento' },
-      { name: 'Flacidez Facial', anchor: 'tratamento' },
-      { name: 'Olheiras', anchor: 'tratamento' },
-      { name: 'Preenchimento Facial', anchor: 'tratamento' },
-      { name: 'Harmonização Facial', anchor: 'tratamento' },
-      { name: 'Rugas e Linhas de Expressão', anchor: 'tratamento' },
-      { name: 'Cicatrizes e Marcas', anchor: 'tratamento' },
-      { name: 'Flacidez Facial', anchor: 'tratamento' },
-      { name: 'Olheiras', anchor: 'tratamento' },
-      { name: 'Preenchimento Facial', anchor: 'tratamento' },
-      { name: 'Harmonização Facial', anchor: 'tratamento' },
-      { name: 'Rugas e Linhas de Expressão', anchor: 'tratamento' },
-      { name: 'Cicatrizes e Marcas', anchor: 'tratamento' },
-      { name: 'Flacidez Facial', anchor: 'tratamento' },
-      { name: 'Olheiras', anchor: 'tratamento' },
-      { name: 'Preenchimento Facial', anchor: 'tratamento' },
-      { name: 'Harmonização Facial', anchor: 'tratamento' },
-      { name: 'Rugas e Linhas de Expressão', anchor: 'tratamento' },
-      { name: 'Cicatrizes e Marcas', anchor: 'tratamento' },
-      { name: 'Flacidez Facial', anchor: 'tratamento' },
-      { name: 'Olheiras', anchor: 'tratamento' },
+      { name: 'Preenchimento Facial', anchor: '/tratamento' },
+      { name: 'Harmonização Facial', anchor: '/tratamento' },
+      { name: 'Rugas e Linhas de Expressão', anchor: '/tratamento' },
+      { name: 'Cicatrizes e Marcas', anchor: '/tratamento' },
+      { name: 'Flacidez Facial', anchor: '/tratamento' },
+      { name: 'Olheiras', anchor: '/tratamento' },
+      { name: 'Preenchimento Facial', anchor: '/tratamento' },
+      { name: 'Harmonização Facial', anchor: '/tratamento' },
+      { name: 'Rugas e Linhas de Expressão', anchor: '/tratamento' },
+      { name: 'Cicatrizes e Marcas', anchor: '/tratamento' },
+      { name: 'Flacidez Facial', anchor: '/tratamento' },
+      { name: 'Olheiras', anchor: '/tratamento' },
+      { name: 'Preenchimento Facial', anchor: '/tratamento' },
+      { name: 'Harmonização Facial', anchor: '/tratamento' },
+      { name: 'Rugas e Linhas de Expressão', anchor: '/tratamento' },
+      { name: 'Cicatrizes e Marcas', anchor: '/tratamento' },
+      { name: 'Flacidez Facial', anchor: '/tratamento' },
+      { name: 'Olheiras', anchor: '/tratamento' },
+      { name: 'Preenchimento Facial', anchor: '/tratamento' },
+      { name: 'Harmonização Facial', anchor: '/tratamento' },
+      { name: 'Rugas e Linhas de Expressão', anchor: '/tratamento' },
+      { name: 'Cicatrizes e Marcas', anchor: '/tratamento' },
+      { name: 'Flacidez Facial', anchor: '/tratamento' },
+      { name: 'Olheiras', anchor: '/tratamento' },
     ],
     Procedimentos: [
-      { name: 'Gordura Localizada', anchor: 'tratamento' },
-      { name: 'Flacidez Corporal', anchor: 'tratamento' },
-      { name: 'Celulite', anchor: 'tratamento' },
-      { name: 'Estrias', anchor: 'tratamento' },
-      { name: 'Depilação à laser', anchor: 'tratamento' },
-      { name: 'Remoção de Tatuagem', anchor: 'tratamento' },
-      { name: 'Gordura Localizada', anchor: 'tratamento' },
-      { name: 'Flacidez Corporal', anchor: 'tratamento' },
-      { name: 'Celulite', anchor: 'tratamento' },
-      { name: 'Estrias', anchor: 'tratamento' },
-      { name: 'Depilação à laser', anchor: 'tratamento' },
-      { name: 'Remoção de Tatuagem', anchor: 'tratamento' },
-      { name: 'Gordura Localizada', anchor: 'tratamento' },
-      { name: 'Remoção de Tatuagem', anchor: 'tratamento' },
+      { name: 'Gordura Localizada', anchor: '/tratamento' },
+      { name: 'Flacidez Corporal', anchor: '/tratamento' },
+      { name: 'Celulite', anchor: '/tratamento' },
+      { name: 'Estrias', anchor: '/tratamento' },
+      { name: 'Depilação à laser', anchor: '/tratamento' },
+      { name: 'Remoção de Tatuagem', anchor: '/tratamento' },
+      { name: 'Gordura Localizada2', anchor: '/tratamento' },
+      { name: 'Flacidez Corporal', anchor: '/tratamento' },
+      { name: 'Celulite', anchor: '/tratamento' },
+      { name: 'Estrias', anchor: '/tratamento' },
+      { name: 'Depilação à laser', anchor: '/tratamento' },
+      { name: 'Remoção de Tatuagem', anchor: '/tratamento' },
+      { name: 'Gordura Localizada', anchor: '/tratamento' },
+      { name: 'Remoção de Tatuagem', anchor: '/tratamento' },
     ],
   }
 
@@ -82,11 +81,10 @@ const ServiceList: React.FC<{ category: string; services: Service[] }> = ({
       <h2 className="my-3 text-xl font-normal leading-6">{category}</h2>
       <ul className="mb-2 space-y-3 pl-5 text-sm">
         {services.map((service, index) => (
-          <li key={index} className="">
-            &#8212;{' '}
-            <Link reloadDocument to={`/${service.anchor}`}>
-              {service.name}
-            </Link>
+          <li key={index}>
+            <a rel="noopener noreferrer" href={`${service.anchor}`}>
+              &#8212; {service.name}
+            </a>
           </li>
         ))}
       </ul>
