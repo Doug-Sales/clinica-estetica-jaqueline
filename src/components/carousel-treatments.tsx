@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import { treatmentsPopular } from '@/lib/imports-photos'
 
 import { AspectRatio } from './ui/aspect-ratio'
@@ -57,7 +59,7 @@ export function TreatmentsCarousel() {
                         type="button"
                         asChild
                       >
-                        <a href="/tratamento">SAIBA MAIS</a>
+                        <NavLink to={'/tratamento'}>SAIBA MAIS</NavLink>
                       </Button>
                     </div>
                   </CardContent>
